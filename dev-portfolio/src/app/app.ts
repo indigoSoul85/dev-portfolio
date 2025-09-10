@@ -1,6 +1,5 @@
-import { Component, signal, computed, inject, PLATFORM_ID } from '@angular/core';
+import { Component, signal, inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule, DatePipe, isPlatformBrowser } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
 
 interface Experience {
   id: number;
@@ -124,7 +123,7 @@ export class App {
   // Skills for parallax animation
   protected readonly skills = signal<Skill[]>([
     { name: 'Agile', delay: 0 },
-    { name: '', delay: 0.5 },
+    { name: 'SCRUM', delay: 0.5 },
     { name: 'JavaScript', delay: 1 },
     { name: 'C#', delay: 1.5 },
     { name: 'HTML5', delay: 2 },

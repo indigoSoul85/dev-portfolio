@@ -7,12 +7,12 @@
       <span class="logo-text">RB</span>
     </div>
     <ul class="nav-menu">
-      <li><a (click)="scrollToSection('home')" class="nav-link">Home</a></li>
-      <li><a (click)="scrollToSection('about')" class="nav-link">About</a></li>
-      <li><a (click)="scrollToSection('experience')" class="nav-link">Experience</a></li>
-      <li><a (click)="scrollToSection('skills')" class="nav-link">Skills</a></li>
-      <li><a (click)="scrollToSection('portfolio')" class="nav-link">Portfolio</a></li>
-      <li><a (click)="scrollToSection('contact')" class="nav-link">Contact</a></li>
+      <li><a (click)="scrollToSection('home')" class="nav-link" aria-label="Navigate to home section">Home</a></li>
+      <li><a (click)="scrollToSection('about')" class="nav-link" aria-label="Navigate to about section">About</a></li>
+      <li><a (click)="scrollToSection('experience')" class="nav-link" aria-label="Navigate to experience section">Experience</a></li>
+      <li><a (click)="scrollToSection('skills')" class="nav-link" aria-label="Navigate to skills section">Skills</a></li>
+      <li><a (click)="scrollToSection('portfolio')" class="nav-link" aria-label="Navigate to portfolio section">Portfolio</a></li>
+      <li><a (click)="scrollToSection('contact')" class="nav-link" aria-label="Navigate to contact section">Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -30,24 +30,26 @@
         <p class="hero-description">
           Experienced Software Engineer with over 3+ years of experience in leading teams and 12+ years 
           delivering high-quality web applications via SCRUM and Agile methodologies. 
-          Proven expertise in Angular, TypeScript, and full-stack development.
+          Proven expertise in Angular, TypeScript, and full-stack development. I am
+          embracing the AI phase of software and utilize it for higher productivity 
+          and creative assistance.
         </p>
         <div class="hero-actions">
-          <button (click)="scrollToSection('portfolio')" class="btn-primary">View My Work</button>
-          <button (click)="scrollToSection('contact')" class="btn-secondary">Get In Touch</button>
+          <button (click)="scrollToSection('portfolio')" class="btn-primary" aria-label="Navigate to portfolio section">View My Work</button>
+          <button (click)="scrollToSection('contact')" class="btn-secondary" aria-label="Navigate to contact section">Get In Touch</button>
         </div>
       </div>
       <div class="hero-visual">
         <div class="hero-avatar">
           <div class="avatar-ring"></div>
           <div class="avatar-content">
-            <img src="pro-me.jpeg" alt="Richard Bishop" class="avatar-image">
+            <img src="pro-me.jpeg" alt="Richard Bishop - Senior Software Engineer" class="avatar-image" loading="lazy">
           </div>
         </div>
       </div>
     </div>
   <!-- Visual Separator -->
-  <div class="section-separator" (click)="scrollToSection('about')">
+  <div class="section-separator" (click)="scrollToSection('about')" role="button" tabindex="0" aria-label="Scroll to about section">
     <div class="separator-line"></div>
     <div class="separator-icon">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -299,27 +301,27 @@
             </svg>
             <span>Shawnee, KS</span>
           </div>
-          <div class="contact-item">
+          <a href="tel:+19132268196" class="contact-item">
             <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
             </svg>
             <span>913.226.8196</span>
-          </div>
-          <div class="contact-item">
+          </a>
+          <a href="mailto:richardcbishop85@gmail.com" class="contact-item">
             <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2V6c0-1.1.9-2 2-2z"></path>
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
               <polyline points="22,6 12,13 2,6"></polyline>
             </svg>
             <span>richardcbishop85@gmail.com</span>
-          </div>
-          <div class="contact-item">
+          </a>
+          <a href="https://linkedin.com/in/hash-key-char" target="_blank" rel="noopener noreferrer" class="contact-item">
             <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
               <rect x="2" y="9" width="4" height="12"></rect>
               <circle cx="4" cy="4" r="2"></circle>
             </svg>
             <span>linkedin.com/in/hash-key-char</span>
-          </div>
+          </a>
         </div>
       </div>
       <div class="container">
