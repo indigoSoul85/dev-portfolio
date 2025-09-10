@@ -48,16 +48,6 @@
         </div>
       </div>
     </div>
-  <!-- Visual Separator -->
-  <div class="section-separator" (click)="scrollToSection('about')" role="button" tabindex="0" aria-label="Scroll to about section">
-    <div class="separator-line"></div>
-    <div class="separator-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="m6 9 6 6 6-6"></path>
-      </svg>
-    </div>
-    <div class="separator-line"></div>
-  </div>
   </section>
 
   <!-- About Section -->
@@ -140,7 +130,6 @@
   <!-- Parallax Skills Section -->
   <section class="parallax-section">
     <div class="parallax-content">
-      <h2 class="parallax-title">Technical Excellence</h2>
       <div class="floating-skills">
         @for (skill of skills(); track skill.name) {
           <div class="skill-bubble" [style.animation-delay]="skill.delay + 's'">
