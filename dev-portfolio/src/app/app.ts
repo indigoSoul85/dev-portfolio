@@ -11,6 +11,7 @@ interface Experience {
 }
 
 interface Skill {
+  id: number;
   name: string;
   delay: number;
 }
@@ -117,23 +118,32 @@ export class App {
         'Constructed an Angular 5 product catalog that is searchable and filterable',
         'Developed three Angular 5 portals for improved business administration management'
       ]
+    },
+    {
+      id: 6,
+      title: 'Programmer/Analyst',
+      company: 'Lockton Affinity',
+      location: 'Overland Park, KS',
+      period: 'Novemver 2011 - September 2014',
+      responsibilities: [
+        'Diagnosed and analyzed ASP.Net website and console application issues using C# and MS SQL',
+        'Developed eCommerce sites utilizing VB.Net and ASP.Net for clients within a custom- built platform with an SQL database for dynamic content management',
+        'Implemented enhancements on multiple client websites using Classic ASP, JavaScript, and jQuery',
+        'Engaged proactively with team members to foster collaboration and enhance collective knowledge',
+      ]
     }
   ]);
 
   // Skills for parallax animation
   protected readonly skills = signal<Skill[]>([
-    { name: 'Agile', delay: 0 },
-    { name: 'SCRUM', delay: 0.5 },
-    { name: 'JavaScript', delay: 1 },
-    { name: 'C#', delay: 1.5 },
-    { name: 'HTML5', delay: 2 },
-    { name: 'CSS3', delay: 2.5 },
-    { name: 'AWS', delay: 3 },
-    { name: 'SQL', delay: 3.5 },
-    { name: 'TypeScript', delay: 4 },
-    { name: 'ASP.NET', delay: 4.5 },
-    { name: 'Git', delay: 5 },
-    { name: 'Angular', delay: 5.5 }
+    { id: 5, name: 'AWS', delay: 3.2 },
+    { id: 3, name: 'SQL', delay: 4.0 },
+    { id: 2, name: 'Agile', delay: 4.8 },
+    { id: 8, name: 'Angular', delay: 0 },
+    { id: 1, name: 'Git', delay: 5.6 },
+    { id: 7, name: 'TypeScript', delay: 0.8 },
+    { id: 6, name: 'JavaScript', delay: 1.6 },
+    { id: 4, name: 'C#', delay: 2.4 },
   ]);
 
   // Technical skills with experience and branding

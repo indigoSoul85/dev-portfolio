@@ -131,7 +131,7 @@
   <section class="parallax-section">
     <div class="parallax-content">
       <div class="floating-skills">
-        @for (skill of skills(); track skill.name) {
+        @for (skill of skills(); track skill.id) {
           <div class="skill-bubble" [style.animation-delay]="skill.delay + 's'">
             {{ skill.name }}
           </div>
