@@ -1,5 +1,5 @@
 import { Component, signal, computed, inject, PLATFORM_ID } from '@angular/core';
-import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { CommonModule, DatePipe, isPlatformBrowser } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 
 interface Experience {
@@ -16,6 +16,14 @@ interface Skill {
   delay: number;
 }
 
+interface TechSkill {
+  name: string;
+  years: number;
+  icon: string;
+  color: string;
+  category: 'Languages' | 'Frameworks' | 'Tools' | 'Methodologies';
+}
+
 interface Project {
   id: number;
   title: string;
@@ -26,13 +34,14 @@ interface Project {
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule],
+  imports: [CommonModule, DatePipe],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App {
   private platformId = inject(PLATFORM_ID);
   protected readonly title = signal('Richard Bishop Portfolio');
+  currentYear = new Date();
 
   // Scroll detection signal
   protected readonly isScrolled = signal(false);
@@ -114,18 +123,52 @@ export class App {
 
   // Skills for parallax animation
   protected readonly skills = signal<Skill[]>([
-    { name: 'Angular', delay: 0 },
-    { name: 'TypeScript', delay: 0.5 },
+    { name: 'Agile', delay: 0 },
+    { name: '', delay: 0.5 },
     { name: 'JavaScript', delay: 1 },
     { name: 'C#', delay: 1.5 },
     { name: 'HTML5', delay: 2 },
     { name: 'CSS3', delay: 2.5 },
     { name: 'AWS', delay: 3 },
     { name: 'SQL', delay: 3.5 },
-    { name: 'React', delay: 4 },
+    { name: 'TypeScript', delay: 4 },
     { name: 'ASP.NET', delay: 4.5 },
     { name: 'Git', delay: 5 },
-    { name: 'Agile', delay: 5.5 }
+    { name: 'Angular', delay: 5.5 }
+  ]);
+
+  // Technical skills with experience and branding
+  protected readonly techSkills = signal<TechSkill[]>([
+    // Languages
+    { name: 'TypeScript', years: 8, icon: 'TS', color: '#3178C6', category: 'Languages' },
+    { name: 'JavaScript', years: 12, icon: 'JS', color: '#F7DF1E', category: 'Languages' },
+    { name: 'HTML5', years: 12, icon: '🌐', color: '#E34F26', category: 'Languages' },
+    { name: 'CSS3', years: 12, icon: '🎨', color: '#1572B6', category: 'Languages' },
+    { name: 'C#', years: 10, icon: 'C#', color: '#239120', category: 'Languages' },
+    { name: 'SQL', years: 10, icon: '🗄️', color: '#4479A1', category: 'Languages' },
+    
+    // Frameworks
+    { name: 'Angular', years: 9, icon: '⚡', color: '#DD0031', category: 'Frameworks' },
+    { name: 'ASP.NET', years: 8, icon: '.NET', color: '#512BD4', category: 'Frameworks' },
+    { name: 'React', years: 3, icon: '⚛️', color: '#61DAFB', category: 'Frameworks' },
+    { name: 'Bootstrap', years: 8, icon: 'B', color: '#7952B3', category: 'Frameworks' },
+    { name: 'Material UI', years: 5, icon: 'M', color: '#0081CB', category: 'Frameworks' },
+    { name: 'RxJS', years: 6, icon: 'Rx', color: '#B7178C', category: 'Frameworks' },
+    
+    // Tools
+    { name: 'Visual Studio', years: 10, icon: 'VS', color: '#5C2D91', category: 'Tools' },
+    { name: 'VS Code', years: 8, icon: '💻', color: '#007ACC', category: 'Tools' },
+    { name: 'Git', years: 10, icon: '🔧', color: '#F05032', category: 'Tools' },
+    { name: 'AWS', years: 4, icon: '☁️', color: '#FF9900', category: 'Tools' },
+    { name: 'Figma', years: 3, icon: '🎯', color: '#F24E1E', category: 'Tools' },
+    { name: 'Postman', years: 6, icon: '📮', color: '#FF6C37', category: 'Tools' },
+    
+    // Methodologies
+    { name: 'Agile', years: 10, icon: '🔄', color: '#0052CC', category: 'Methodologies' },
+    { name: 'SCRUM', years: 8, icon: '📊', color: '#009639', category: 'Methodologies' },
+    { name: 'Kanban', years: 6, icon: '📋', color: '#0079BF', category: 'Methodologies' },
+    { name: 'WCAG', years: 4, icon: '♿', color: '#005A9C', category: 'Methodologies' },
+    { name: '508 Standards', years: 2, icon: '📜', color: '#2E3440', category: 'Methodologies' }
   ]);
 
   // Portfolio projects
@@ -177,6 +220,11 @@ export class App {
       ]
     }
   ]);
+
+  // Get skills by category
+  protected getSkillsByCategory(category: string): TechSkill[] {
+    return this.techSkills().filter(skill => skill.category === category);
+  }
 
   constructor() {
     if (isPlatformBrowser(this.platformId)) {

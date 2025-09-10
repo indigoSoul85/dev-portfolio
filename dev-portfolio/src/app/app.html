@@ -154,48 +154,98 @@
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Technical Skills</h2>
-        <p class="section-subtitle">Technologies I work with</p>
+        <p class="section-subtitle">Technologies I work with and years of experience</p>
       </div>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3>Languages</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">TypeScript</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">HTML5</span>
-            <span class="skill-tag">CSS3</span>
-            <span class="skill-tag">C#</span>
-            <span class="skill-tag">SQL</span>
+      <div class="skills-table-grid">
+        <div class="skill-category-table">
+          <h3 class="category-title">Languages</h3>
+          <div class="skills-table">
+            @for (skill of getSkillsByCategory('Languages'); track skill.name) {
+              <div class="skill-row">
+                <div class="skill-info">
+                  <span class="skill-icon" [style.color]="skill.color">{{ skill.icon }}</span>
+                  <span class="skill-name">{{ skill.name }}</span>
+                </div>
+                <div class="skill-experience">
+                  <span class="experience-years">{{ skill.years }}+ years</span>
+                  <div class="experience-bar">
+                    <div class="experience-fill" 
+                         [style.width]="(skill.years / 12 * 100) + '%'"
+                         [style.background-color]="skill.color">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            }
           </div>
         </div>
-        <div class="skill-category">
-          <h3>Frameworks</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Angular</span>
-            <span class="skill-tag">ASP.NET</span>
-            <span class="skill-tag">AngularJS</span>
-            <span class="skill-tag">React</span>
+
+        <div class="skill-category-table">
+          <h3 class="category-title">Frameworks</h3>
+          <div class="skills-table">
+            @for (skill of getSkillsByCategory('Frameworks'); track skill.name) {
+              <div class="skill-row">
+                <div class="skill-info">
+                  <span class="skill-icon" [style.color]="skill.color">{{ skill.icon }}</span>
+                  <span class="skill-name">{{ skill.name }}</span>
+                </div>
+                <div class="skill-experience">
+                  <span class="experience-years">{{ skill.years }}+ years</span>
+                  <div class="experience-bar">
+                    <div class="experience-fill" 
+                         [style.width]="(skill.years / 12 * 100) + '%'"
+                         [style.background-color]="skill.color">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            }
           </div>
         </div>
-        <div class="skill-category">
-          <h3>Tools & Technologies</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">AWS</span>
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">Visual Studio</span>
-            <span class="skill-tag">Figma</span>
-            <span class="skill-tag">MSSQL</span>
-            <span class="skill-tag">PostgreSQL</span>
+
+        <div class="skill-category-table">
+          <h3 class="category-title">Tools</h3>
+          <div class="skills-table">
+            @for (skill of getSkillsByCategory('Tools'); track skill.name) {
+              <div class="skill-row">
+                <div class="skill-info">
+                  <span class="skill-icon" [style.color]="skill.color">{{ skill.icon }}</span>
+                  <span class="skill-name">{{ skill.name }}</span>
+                </div>
+                <div class="skill-experience">
+                  <span class="experience-years">{{ skill.years }}+ years</span>
+                  <div class="experience-bar">
+                    <div class="experience-fill" 
+                         [style.width]="(skill.years / 12 * 100) + '%'"
+                         [style.background-color]="skill.color">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            }
           </div>
         </div>
-        <div class="skill-category">
-          <h3>Methodologies</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Agile</span>
-            <span class="skill-tag">SCRUM</span>
-            <span class="skill-tag">Kanban</span>
-            <span class="skill-tag">WCAG</span>
-            <span class="skill-tag">508 Standards</span>
+
+        <div class="skill-category-table">
+          <h3 class="category-title">Methodologies</h3>
+          <div class="skills-table">
+            @for (skill of getSkillsByCategory('Methodologies'); track skill.name) {
+              <div class="skill-row">
+                <div class="skill-info">
+                  <span class="skill-icon" [style.color]="skill.color">{{ skill.icon }}</span>
+                  <span class="skill-name">{{ skill.name }}</span>
+                </div>
+                <div class="skill-experience">
+                  <span class="experience-years">{{ skill.years }}+ years</span>
+                  <div class="experience-bar">
+                    <div class="experience-fill" 
+                         [style.width]="(skill.years / 12 * 100) + '%'"
+                         [style.background-color]="skill.color">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            }
           </div>
         </div>
       </div>
@@ -239,7 +289,6 @@
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Let's Connect</h2>
-        <p class="section-subtitle">Ready to discuss your next project</p>
       </div>
       <div class="contact-content">
         <div class="contact-info">
@@ -258,7 +307,7 @@
           </div>
           <div class="contact-item">
             <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2V6c0-1.1.9-2 2-2z"></path>
               <polyline points="22,6 12,13 2,6"></polyline>
             </svg>
             <span>richardcbishop85@gmail.com</span>
@@ -272,31 +321,17 @@
             <span>linkedin.com/in/hash-key-char</span>
           </div>
         </div>
-        <div class="contact-form">
-          <form>
-            <div class="form-group">
-              <input type="text" placeholder="Your Name" class="form-input">
-            </div>
-            <div class="form-group">
-              <input type="email" placeholder="Your Email" class="form-input">
-            </div>
-            <div class="form-group">
-              <input type="text" placeholder="Subject" class="form-input">
-            </div>
-            <div class="form-group">
-              <textarea placeholder="Your Message" rows="5" class="form-input"></textarea>
-            </div>
-            <button type="submit" class="btn-primary">Send Message</button>
-          </form>
-        </div>
+      </div>
+      <div class="container">
+        <p>&copy; {{currentYear | date: 'YYYY'}} Richard Bishop. All rights reserved.</p>
       </div>
     </div>
   </section>
 </main>
 
-<!-- Footer -->
+<!-- Footer 
 <footer class="footer">
   <div class="container">
     <p>&copy; 2024 Richard Bishop. All rights reserved.</p>
   </div>
-</footer>
+</footer>-->
