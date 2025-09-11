@@ -153,15 +153,16 @@ export class App {
     { name: 'JavaScript', years: 12, path: './JavaScript.svg', color: '#F7DF1E', category: 'Languages' },
     { name: 'HTML5', years: 12, path: './HTML5.svg', color: '#E34F26', category: 'Languages' },
     { name: 'CSS3', years: 12, path: './CSS3.svg', color: '#1572B6', category: 'Languages' },
-    { name: 'C#', years: 10, path: './Csharp.svg', color: '#239120', category: 'Languages' },
-    { name: 'SQL', years: 10, path: './Microsoft-SQL-Server.svg', color: '#4479A1', category: 'Languages' },
+    { name: 'C#', years: 5, path: './Csharp.svg', color: '#239120', category: 'Languages' },
+    { name: 'SQL', years: 5, path: './Microsoft-SQL-Server.svg', color: '#4479A1', category: 'Languages' },
+    { name: 'jQuery', years: 5, path: './jQuery.svg', color: '#4479A1', category: 'Languages' },
     
     // Frameworks
     { name: 'Angular', years: 9, path: './Angular.svg', color: '#DD0031', category: 'Frameworks' },
     { name: 'AngularJS', years: 3, path: './AngularJS.svg', color: '#DD0031', category: 'Frameworks' },
-    { name: 'ASP.NET', years: 8, path: './.NET.svg', color: '#512BD4', category: 'Frameworks' },
+    { name: 'ASP.NET', years: 5, path: './.NET.svg', color: '#512BD4', category: 'Frameworks' },
     { name: 'React', years: 3, path: './React.svg', color: '#61DAFB', category: 'Frameworks' },
-    { name: 'Bootstrap', years: 8, path: './Bootstrap.svg', color: '#7952B3', category: 'Frameworks' },
+    { name: 'Bootstrap', years: 4, path: './Bootstrap.svg', color: '#7952B3', category: 'Frameworks' },
     { name: 'Material UI', years: 5, path: './Material-UI.svg', color: '#0081CB', category: 'Frameworks' },
     { name: 'RxJS', years: 6, path: './RxJs.png', color: '#B7178C', category: 'Frameworks' },
     
