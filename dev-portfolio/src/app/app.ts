@@ -157,7 +157,7 @@ export class App {
     { name: 'SQL', years: 10, icon: '🗄️', color: '#4479A1', category: 'Languages' },
     
     // Frameworks
-    { name: 'Angular', years: 9, icon: '⚡', color: '#DD0031', category: 'Frameworks' },
+    { name: 'Angular', years: 9, icon: 'A', color: '#DD0031', category: 'Frameworks' },
     { name: 'ASP.NET', years: 8, icon: '.NET', color: '#512BD4', category: 'Frameworks' },
     { name: 'React', years: 3, icon: '⚛️', color: '#61DAFB', category: 'Frameworks' },
     { name: 'Bootstrap', years: 8, icon: 'B', color: '#7952B3', category: 'Frameworks' },
