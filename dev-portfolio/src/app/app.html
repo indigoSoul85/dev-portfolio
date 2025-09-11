@@ -154,7 +154,7 @@
             @for (skill of getSkillsByCategory('Languages'); track skill.name) {
               <div class="skill-row">
                 <div class="skill-info">
-                  <span class="skill-icon" [style.color]="skill.color">{{ skill.icon }}</span>
+                  <img class="skill-icon" [src]="skill.path" [alt]="skill.name + ' logo'" />
                   <span class="skill-name">{{ skill.name }}</span>
                 </div>
                 <div class="skill-experience">
@@ -177,7 +177,7 @@
             @for (skill of getSkillsByCategory('Frameworks'); track skill.name) {
               <div class="skill-row">
                 <div class="skill-info">
-                  <span class="skill-icon" [style.color]="skill.color">{{ skill.icon }}</span>
+                  <img class="skill-icon" [src]="skill.path" [alt]="skill.name + ' logo'" />
                   <span class="skill-name">{{ skill.name }}</span>
                 </div>
                 <div class="skill-experience">
@@ -200,7 +200,7 @@
             @for (skill of getSkillsByCategory('Tools'); track skill.name) {
               <div class="skill-row">
                 <div class="skill-info">
-                  <span class="skill-icon" [style.color]="skill.color">{{ skill.icon }}</span>
+                  <img class="skill-icon" [src]="skill.path" [alt]="skill.name + ' logo'" />
                   <span class="skill-name">{{ skill.name }}</span>
                 </div>
                 <div class="skill-experience">
@@ -223,7 +223,7 @@
             @for (skill of getSkillsByCategory('Methodologies'); track skill.name) {
               <div class="skill-row">
                 <div class="skill-info">
-                  <span class="skill-icon" [style.color]="skill.color">{{ skill.icon }}</span>
+                  <img class="skill-icon" [src]="skill.path" [alt]="skill.name + ' logo'" />
                   <span class="skill-name">{{ skill.name }}</span>
                 </div>
                 <div class="skill-experience">
