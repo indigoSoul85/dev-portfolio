@@ -170,6 +170,7 @@ export class HomeComponent {
     { name: 'AWS', years: 4, path: './AWS.svg', color: '#FF9900', category: 'Tools' },
     { name: 'Figma', years: 3, path: './Figma.svg', color: '#F24E1E', category: 'Tools' },
     { name: 'Postman', years: 6, path: './Postman.svg', color: '#FF6C37', category: 'Tools' },
+    { name: 'D3.js', years: 6, path: './D3.js.svg', color: '#FF6C37', category: 'Tools' },
     
     // Methodologies
     { name: 'Agile, SCRUM', years: 10, path: './Agile.png', color: '#0052CC', category: 'Methodologies' },
