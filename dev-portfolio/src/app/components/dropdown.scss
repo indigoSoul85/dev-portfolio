@@ -11,17 +11,38 @@
     cursor: pointer;
     font-size: inherit;
     font-family: inherit;
-    color: inherit;
-    padding: 0.5rem 1rem;
+    color: white;
+    font-weight: 500;
+    padding: 0;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    opacity: 0.9;
 
     &:hover {
-      color: var(--primary-color, #007acc);
+      color: white;
+      opacity: 1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: white;
+      transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
     }
 
     .dropdown-arrow {
       transition: transform 0.3s ease;
+      width: 16px;
+      height: 16px;
       
       &.rotated {
         transform: rotate(180deg);
