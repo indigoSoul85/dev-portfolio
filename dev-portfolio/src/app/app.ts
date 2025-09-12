@@ -149,7 +149,7 @@ export class App {
   // Technical skills with experience and branding
   protected readonly techSkills = signal<TechSkill[]>([
     // Languages
-    { name: 'TypeScript', years: 8, path: './TypeScript.svg', color: '#3178C6', category: 'Languages' },
+    { name: 'TypeScript', years: 9, path: './TypeScript.svg', color: '#3178C6', category: 'Languages' },
     { name: 'JavaScript', years: 12, path: './JavaScript.svg', color: '#F7DF1E', category: 'Languages' },
     { name: 'HTML5', years: 12, path: './HTML5.svg', color: '#E34F26', category: 'Languages' },
     { name: 'CSS3', years: 12, path: './CSS3.svg', color: '#1572B6', category: 'Languages' },
@@ -167,8 +167,8 @@ export class App {
     { name: 'RxJS', years: 6, path: './RxJs.png', color: '#B7178C', category: 'Frameworks' },
     
     // Tools
-    { name: 'Visual Studio', years: 10, path: './Visual-Studio.svg', color: '#5C2D91', category: 'Tools' },
     { name: 'VS Code', years: 8, path: './Visual-Studio-Code-(VS-Code).svg', color: '#007ACC', category: 'Tools' },
+    { name: 'Visual Studio', years: 10, path: './Visual-Studio.svg', color: '#5C2D91', category: 'Tools' },
     { name: 'Git', years: 10, path: './Git.svg', color: '#F05032', category: 'Tools' },
     { name: 'AWS', years: 4, path: './AWS.svg', color: '#FF9900', category: 'Tools' },
     { name: 'Figma', years: 3, path: './Figma.svg', color: '#F24E1E', category: 'Tools' },
@@ -177,7 +177,7 @@ export class App {
     // Methodologies
     { name: 'Agile, SCRUM', years: 10, path: './Agile.png', color: '#0052CC', category: 'Methodologies' },
     { name: 'Kanban', years: 6, path: './Kanban.png', color: '#0079BF', category: 'Methodologies' },
-    { name: 'WCAG', years: 4, path: './WCAG.jpg', color: '#005A9C', category: 'Methodologies' },
+    { name: 'WCAG', years: 2, path: './WCAG.jpg', color: '#005A9C', category: 'Methodologies' },
     { name: '508 Standards', years: 2, path: './508.png', color: '#2E3440', category: 'Methodologies' }
   ]);
 
