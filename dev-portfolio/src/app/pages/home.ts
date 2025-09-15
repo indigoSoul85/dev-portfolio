@@ -3,11 +3,14 @@ import { CommonModule, DatePipe, isPlatformBrowser } from '@angular/common';
 import { Experience, Skill, TechSkill, Project } from '../models';
 import { EXPERIENCE_DATA, SKILLS_DATA, TECH_SKILLS_DATA, PORTFOLIO_DATA } from '../shared/my-data';
 import { HeroComponent } from '../components/hero';
+import { TimelineItemComponent } from '../components/timelineItem';
+import { SkillRowComponent } from '../components/skillRow';
+import { ProjectCardComponent } from '../components/projectCard';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, DatePipe, HeroComponent],
+  imports: [CommonModule, DatePipe, HeroComponent, TimelineItemComponent, SkillRowComponent, ProjectCardComponent],
   templateUrl: './home.html',
   styleUrl: '../app.scss'
 })

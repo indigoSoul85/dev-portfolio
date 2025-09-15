@@ -1,0 +1,98 @@
+@use './../../../styles.scss';
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 5rem;
+
+  @media (max-width: 768px) {
+    padding-left: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .timeline-marker {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background: linear-gradient(135deg, var(--primary-blue-light), var(--accent-blue));
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px rgba(26, 117, 255, 0.5);
+    z-index: 2;
+
+    @media (max-width: 768px) {
+      left: 0rem;
+    }
+  }
+
+  .timeline-content {
+    background: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(26, 117, 255, 0.25);
+      background: rgba(255, 255, 255, 1);
+    }
+  }
+
+  .job-header {
+    margin-bottom: 1rem;
+
+    .job-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .job-company {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--primary-blue);
+      margin-bottom: 0.25rem;
+    }
+
+    .job-period, .job-location {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  .job-responsibilities {
+    list-style: none;
+
+    li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      font-size: 0.9rem;
+
+      &::before {
+        content: '▸';
+        position: absolute;
+        left: 0;
+        color: var(--accent-blue);
+        font-weight: bold;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+// Performance optimizations
+.timeline-content {
+  will-change: transform;
+}

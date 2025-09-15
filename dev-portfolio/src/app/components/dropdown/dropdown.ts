@@ -22,14 +22,14 @@ export interface DropdownItem {
         type="button"
       >
         {{ label }}
-        <svg 
-          class="dropdown-arrow" 
+        <svg
+          class="dropdown-arrow"
           [class.rotated]="isOpen()"
-          width="16" 
-          height="16" 
-          viewBox="0 0 24 24" 
-          fill="none" 
-          stroke="currentColor" 
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
           stroke-width="2"
         >
           <path d="m6 9 6 6 6-6"/>
@@ -38,16 +38,16 @@ export interface DropdownItem {
       <div class="dropdown-menu" [class.show]="isOpen()">
         @for (item of items; track item.label) {
           @if (item.routerLink) {
-            <a 
-              class="dropdown-item" 
+            <a
+              class="dropdown-item"
               [routerLink]="item.routerLink"
               (click)="selectItem(item)"
             >
               {{ item.label }}
             </a>
           } @else {
-            <button 
-              class="dropdown-item" 
+            <button
+              class="dropdown-item"
               type="button"
               (click)="selectItem(item)"
             >
@@ -63,7 +63,7 @@ export interface DropdownItem {
 export class DropdownComponent {
   @Input() label: string = 'Dropdown';
   @Input() items: DropdownItem[] = [];
-  
+
   protected readonly isOpen = signal(false);
 
   toggle(): void {

@@ -1,0 +1,124 @@
+@use './../../../styles.scss';
+
+.project-card {
+  background: var(--surface);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+  }
+
+  &:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(79, 70, 229, 0.15);
+    border-color: var(--primary-blue);
+
+    &::before {
+      transform: scaleX(1);
+    }
+
+    .project-tech .tech-tag {
+      transform: translateY(-2px);
+    }
+  }
+
+  .project-header {
+    margin-bottom: 1.5rem;
+
+    .project-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 1.25rem;
+      background: linear-gradient(135deg, var(--text-primary), var(--primary-blue));
+      background-clip: text;
+      -webkit-background-clip: text;
+      transition: all 0.3s ease;
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+
+      .tech-tag {
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: 1px solid transparent;
+
+        &:nth-child(1) { background: linear-gradient(135deg, #DD0031, #C3002F); color: white; }
+        &:nth-child(2) { background: linear-gradient(135deg, #3776AB, #306998); color: white; }
+        &:nth-child(3) { background: linear-gradient(135deg, #FF9900, #FF7700); color: white; }
+        &:nth-child(4) { background: linear-gradient(135deg, #4479A1, #336791); color: white; }
+        &:nth-child(5) { background: linear-gradient(135deg, #F7DF1E, #F0DB15); color: #2D3748; }
+        &:nth-child(6) { background: linear-gradient(135deg, #239120, #1E7A1E); color: white; }
+        &:nth-child(7) { background: linear-gradient(135deg, #0081CB, #006CB4); color: white; }
+        &:nth-child(8) { background: linear-gradient(135deg, #61DAFB, #21D4FD); color: #2D3748; }
+
+        // Fallback for additional tech tags
+        &:nth-child(n+9) {
+          background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+          color: white;
+        }
+
+        &:hover {
+          transform: translateY(-3px) scale(1.05);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+  }
+
+  .project-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-highlights {
+    list-style: none;
+
+    li {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+
+      &::before {
+        content: '▸';
+        position: absolute;
+        left: 0;
+        color: var(--primary-blue);
+        font-weight: bold;
+      }
+
+      &:hover {
+        color: var(--text-primary);
+        transform: translateX(4px);
+      }
+    }
+  }
+}
+
+// Performance optimizations
+.project-card {
+  will-change: transform;
+}

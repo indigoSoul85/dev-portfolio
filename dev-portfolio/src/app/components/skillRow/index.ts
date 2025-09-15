@@ -1,0 +1,1 @@
+export { SkillRowComponent } from './skill-row';

@@ -1,7 +1,7 @@
 import { Component, signal, inject, PLATFORM_ID, Input } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterModule, Router } from '@angular/router';
-import { DropdownComponent, DropdownItem } from './dropdown';
+import { DropdownComponent, DropdownItem } from '../dropdown';
 
 @Component({
   selector: 'app-header',
