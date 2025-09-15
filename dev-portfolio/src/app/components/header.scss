@@ -1,0 +1,78 @@
+// Enhanced Header with Indigo Gradient
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg, #4f46e5, #6366f1, #8b5cf6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(79, 70, 229, 0.3);
+
+  &.scrolled {
+    background: linear-gradient(135deg, #3730a3, #4338ca, #7c3aed);
+    box-shadow: 0 8px 40px rgba(79, 70, 229, 0.4);
+  }
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+}
+
+.logo {
+  .logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+  }
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    display: none; // Simplified for now, can add mobile menu later
+  }
+
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    opacity: 0.9;
+
+    &:hover {
+      color: white;
+      opacity: 1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: white;
+      transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}

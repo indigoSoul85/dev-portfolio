@@ -1,27 +1,7 @@
 <!-- Richard Bishop Portfolio -->
 
 <!-- Header with Sticky Navigation -->
-<header class="header" [class.scrolled]="isScrolled()">
-  <nav class="nav-container">
-    <div class="logo">
-      <span class="logo-text">RB</span>
-    </div>
-    <ul class="nav-menu">
-      <li><a routerLink="/" class="nav-link" aria-label="Navigate to home">Home</a></li>
-      <li><a (click)="scrollToSection('about')" class="nav-link" aria-label="Navigate to about section">About</a></li>
-      <li><a (click)="scrollToSection('experience')" class="nav-link" aria-label="Navigate to experience section">Experience</a></li>
-      <li><a (click)="scrollToSection('skills')" class="nav-link" aria-label="Navigate to skills section">Skills</a></li>
-      <li><a (click)="scrollToSection('portfolio')" class="nav-link" aria-label="Navigate to portfolio section">Portfolio</a></li>
-      <li>
-        <app-dropdown 
-          label="Demos" 
-          [items]="demosDropdownItems">
-        </app-dropdown>
-      </li>
-      <li><a (click)="scrollToSection('contact')" class="nav-link" aria-label="Navigate to contact section">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+<app-header></app-header>
 
 <main class="main">
   <router-outlet></router-outlet>

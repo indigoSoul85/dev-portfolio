@@ -1,10 +1,16 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home';
-import { D3DemoComponent } from './pages/d3-demo';
-import { ChatBotComponent } from './pages/chat-bot';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'd3-demo', component: D3DemoComponent },
-  { path: 'chat-bot', component: ChatBotComponent }
+  {
+    path: '',
+    loadComponent: () => import('./pages/home').then(m => m.HomeComponent)
+  },
+  {
+    path: 'd3-demo',
+    loadComponent: () => import('./pages/d3-demo').then(m => m.D3DemoComponent)
+  },
+  {
+    path: 'chat-bot',
+    loadComponent: () => import('./pages/chat-bot').then(m => m.ChatBotComponent)
+  }
 ];
