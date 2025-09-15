@@ -1,1 +1,2 @@
-export { DropdownComponent, DropdownItem } from './dropdown';
+export { DropdownComponent } from './dropdown';
+export type { DropdownItem } from './dropdown';

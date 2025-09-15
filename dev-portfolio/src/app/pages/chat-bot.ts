@@ -16,10 +16,9 @@ import { CommonModule } from '@angular/common';
         <section class="chat-section">
           <h2>Welcome to Chat Bot Demo</h2>
           <p>
-            This page demonstrates a conversational AI interface built with Angular.
-            Experience the power of modern chatbot technology and natural language processing.
+            This page demonstrates a conversational AI interface built with Angular, Python, and AWS.
+            This has been trained on my resume as well as publically available information about the companies I worked for.
           </p>
-          
           <div class="chat-placeholder">
             <div class="placeholder-content">
               <div class="chat-icon">💬</div>
@@ -36,7 +35,7 @@ import { CommonModule } from '@angular/common';
       min-height: 100vh;
       padding: 2rem;
       padding-top: 8rem;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #4f46e5, #6366f1, #8b5cf6);
     }
 
     .page-header {
@@ -105,7 +104,7 @@ import { CommonModule } from '@angular/common';
     @media (max-width: 768px) {
       .page-container {
         padding: 1rem;
-        padding-top: 6rem;
+        padding-top: 8rem;
       }
 
       .page-header h1 {

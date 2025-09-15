@@ -1,4 +1,4 @@
-export { Experience } from './experience.model';
-export { Skill } from './skill.model';
-export { TechSkill } from './tech-skill.model';
-export { Project } from './project.model';
+export type { Experience } from './experience.model';
+export type { Skill } from './skill.model';
+export type { TechSkill } from './tech-skill.model';
+export type { Project } from './project.model';
