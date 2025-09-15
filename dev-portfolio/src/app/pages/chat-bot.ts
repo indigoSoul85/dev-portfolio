@@ -35,7 +35,8 @@ import { CommonModule } from '@angular/common';
     .page-container {
       min-height: 100vh;
       padding: 2rem;
-      background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+      padding-top: 8rem;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     }
 
     .page-header {
@@ -104,6 +105,7 @@ import { CommonModule } from '@angular/common';
     @media (max-width: 768px) {
       .page-container {
         padding: 1rem;
+        padding-top: 6rem;
       }
 
       .page-header h1 {
