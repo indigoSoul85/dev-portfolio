@@ -19,7 +19,7 @@ interface TechnologyData {
     <div class="page-container">
       <header class="page-header">
         <h1>Technology Adoption Timeline</h1>
-        <p>Interactive visualization of technology adoption from 1900-2025</p>
+        <p>Interactive visualization of technology adoption from 1900-2025 with D3.js</p>
       </header>
       
       <main class="page-content">
@@ -74,6 +74,17 @@ interface TechnologyData {
                 <span>{{ category }}</span>
               </div>
             </div>
+          </div>
+
+          <div class="data-reference">
+            <h4>Data Reference</h4>
+            <p>
+              Technology adoption data synthesized from multiple historical sources including:
+              <a href="https://ourworldindata.org/technology-adoption" target="_blank" rel="noopener noreferrer">
+                Our World in Data - Technology Adoption
+              </a>
+              and various industry reports from 1900-2025.
+            </p>
           </div>
         </section>
       </main>
@@ -178,6 +189,38 @@ interface TechnologyData {
       width: 16px;
       height: 16px;
       border-radius: 50%;
+    }
+
+    .data-reference {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e0e0e0;
+      text-align: center;
+    }
+
+    .data-reference h4 {
+      color: #333;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .data-reference p {
+      color: #666;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .data-reference a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .data-reference a:hover {
+      color: #5a67d8;
+      text-decoration: underline;
     }
 
     :global(.tooltip) {
