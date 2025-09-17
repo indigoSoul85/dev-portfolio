@@ -1,12 +1,12 @@
 # DevPortfolio
 
-A modern, responsive portfolio website built with Angular 18+ featuring a clean component architecture, lazy loading, and interactive demos.
+A modern, responsive portfolio website built with Angular 20+ featuring a clean component architecture, lazy loading, and interactive demos.
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.2.
 
 ## Features
 
-- **Modern Angular Architecture**: Built with Angular 18+ using standalone components
+- **Modern Angular Architecture**: Built with Angular 20+ using standalone components
 - **Lazy Loading**: Route-based code splitting for optimal performance
 - **Responsive Design**: Mobile-first approach with CSS Grid and Flexbox
 - **Interactive Demos**: D3.js chart demo and chat bot interface
