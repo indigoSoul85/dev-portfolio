@@ -288,8 +288,7 @@ interface TechnologyData {
       fill: #666;
     }
 
-    :global(.axis path,
-    .axis line) {
+    :global(.axis path .axis line) {
       fill: none;
       stroke: #ddd;
       shape-rendering: crispEdges;
